@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estate Centre | Premier Real Estate Karachi</title>
   <meta name="description" content="Search properties for sale and rent across Karachi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,13 +77,13 @@
     .form-control { width: 100%; height: 50px; padding: 0 16px; border: 1px solid var(--line); border-radius: 8px; outline: none; font-size: 14px; color: var(--dark); background: #fafafa; transition: all 0.2s; }
     .form-control:focus { border-color: var(--brand); background: var(--white); box-shadow: 0 0 0 3px rgba(15,118,110,0.1); }
 
-    /* Shared Sections */
+    /* Shared Section Styling */
     section { padding: 80px 0; }
     .section-header { text-align: center; max-width: 600px; margin: 0 auto 50px; }
     .section-title { font-size: 36px; font-weight: 800; color: var(--dark); letter-spacing: -0.5px; margin-bottom: 12px; }
     .section-subtitle { color: var(--muted); font-size: 16px; }
 
-    /* Projects Auto Slider Section */
+    /* Auto Slider Section */
     .projects-slider-section { background: var(--dark); color: var(--white); }
     .projects-slider-section .section-title { color: var(--white); }
     .projects-slider-section .section-subtitle { color: #94a3b8; }
@@ -105,14 +105,7 @@
     .arrow.r { right: -22px; }
     @media(max-width: 768px){ .arrow.l { left: 10px; } .arrow.r { right: 10px; } }
 
-    /* Categories Section */
-    .categories-section { background: var(--white); border-bottom: 1px solid var(--line); }
-    .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
-    .category-card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 20px; text-align: center; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; gap: 12px; font-weight: 700; color: var(--dark); }
-    .category-card:hover { background: var(--brand); color: var(--white); border-color: var(--brand); transform: translateY(-3px); }
-    .category-icon { font-size: 32px; }
-
-    /* Featured Property Cards */
+    /* Featured Properties Section */
     .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
     .property-card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--line); overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; }
     .property-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: #cbd5e1; }
@@ -130,15 +123,14 @@
     .property-price span { font-size: 11px; color: var(--muted); display: block; font-weight: 600; text-transform: uppercase; }
     .property-size { font-size: 13px; font-weight: 600; color: var(--slate); background: var(--bg); padding: 6px 12px; border-radius: 6px; }
 
-    /* Partners Section (Developers) */
-    .partners-section { background: #f1f5f9; padding: 70px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .partners-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 1150px; margin: 0 auto; }
-    @media(min-width: 768px){ .partners-grid { grid-template-columns: repeat(5, 1fr); gap: 24px; } }
-    .partner-item { height: 100px; display: grid; place-items: center; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line); padding: 16px; transition: transform 0.2s; }
-    .partner-item:hover { transform: translateY(-3px); border-color: var(--brand); }
-    .partner-item img { max-height: 50px; width: auto; object-fit: contain; }
+    /* Categories Section */
+    .categories-section { background: var(--white); border-bottom: 1px solid var(--line); }
+    .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
+    .category-card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 20px; text-align: center; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; gap: 12px; font-weight: 700; color: var(--dark); }
+    .category-card:hover { background: var(--brand); color: var(--white); border-color: var(--brand); transform: translateY(-3px); }
+    .category-icon { font-size: 32px; }
 
-    /* Popular Areas Grid */
+    /* Popular Areas Grid Section */
     .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
     .area-card { position: relative; height: 280px; border-radius: var(--radius); overflow: hidden; display: block; }
     .area-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
@@ -154,6 +146,13 @@
     .agent-card h3 { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
     .agent-card p { font-size: 13px; color: var(--muted); font-weight: 500; }
 
+    /* Developers Partners Section */
+    .partners-section { background: #f1f5f9; padding: 70px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .partners-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 1150px; margin: 0 auto; }
+    @media(min-width: 768px){ .partners-grid { grid-template-columns: repeat(5, 1fr); gap: 24px; } }
+    .partner-item { height: 100px; display: grid; place-items: center; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line); padding: 16px; transition: transform 0.2s; font-weight: 700; color: var(--dark); }
+    .partner-item:hover { transform: translateY(-3px); border-color: var(--brand); }
+
     /* Footer */
     footer { background: var(--dark); color: #94a3b8; padding: 80px 0 30px; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
@@ -165,7 +164,7 @@
     .footer-links a:hover { color: var(--brand); }
     .copyright { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 30px; font-size: 13px; text-align: center; }
 
-    /* Mobile Responsive */
+    /* Responsive */
     @media (max-width: 992px) {
       .hero h1 { font-size: 40px; }
       .search-grid { grid-template-columns: 1fr 1fr; }
@@ -191,8 +190,8 @@
         <span>☎ 9 AM – 9 PM</span>
       </div>
       <div class="topbar-socials">
-        <a href="YOUR_FACEBOOK_LINK_HERE">f</a>
-        <a href="YOUR_INSTAGRAM_LINK_HERE">◎</a>
+        <a href="#">f</a>
+        <a href="#">◎</a>
       </div>
     </div>
   </div>
@@ -200,23 +199,22 @@
   <!-- Header Navigation -->
   <header>
     <div class="container">
-      <a class="logo" href="YOUR_HOME_PAGE_LINK_HERE">
-        <img src="YOUR_LOGO_IMAGE_URL_HERE" alt="Estate Centre Logo">
+      <a class="logo" href="#">
         ESTATE <span>CENTRE</span>
       </a>
       
       <nav id="navbar">
-        <a href="YOUR_HOME_PAGE_LINK_HERE">HOME</a>
-        <a href="YOUR_BUY_PAGE_LINK_HERE">BUY</a>
-        <a href="YOUR_RENT_PAGE_LINK_HERE">RENT</a>
-        <a href="YOUR_ABOUT_PAGE_LINK_HERE">ABOUT US</a>
-        <a href="YOUR_BLOG_PAGE_LINK_HERE">BLOG</a>
-        <a href="YOUR_CONTACT_PAGE_LINK_HERE">CONTACT US</a>
+        <a href="#">HOME</a>
+        <a href="#">BUY</a>
+        <a href="#">RENT</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">BLOG</a>
+        <a href="#">CONTACT US</a>
       </nav>
 
       <div class="nav-btn-group">
-        <a href="YOUR_LISTINGS_PAGE_LINK_HERE" class="btn btn-outline">All Listings</a>
-        <a href="YOUR_LOGIN_PAGE_LINK_HERE" class="btn btn-brand">Login</a>
+        <a href="#" class="btn btn-outline">All Listings</a>
+        <a href="#" class="btn btn-brand">Login</a>
       </div>
 
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -234,7 +232,7 @@
     </div>
   </section>
 
-  <!-- Interactive Search Section -->
+  <!-- Search Section -->
   <div class="container search-wrapper">
     <div class="search-card">
       <div class="search-tabs">
@@ -268,13 +266,13 @@
               <option>Commercial</option>
             </select>
           </div>
-          <a href="YOUR_SEARCH_RESULT_PAGE_LINK_HERE" class="btn btn-brand" style="height: 50px;">Search</a>
+          <a href="#" class="btn btn-brand" style="height: 50px;">Search</a>
         </div>
       </form>
     </div>
   </div>
 
-  <!-- SECTION 1: Projects Auto Slider Section -->
+  <!-- 1. AUTO-SLIDER SECTION: Explore All Projects in Karachi -->
   <section id="projects" class="projects-slider-section">
     <div class="container">
       <div class="section-header">
@@ -296,39 +294,55 @@
         <button class="arrow r" id="next" aria-label="Next project">›</button>
       </div>
       <div style="text-align:center; margin-top:40px;">
-        <a class="btn btn-brand" href="YOUR_ALL_PROJECTS_PAGE_LINK_HERE">View More Projects</a>
+        <a class="btn btn-brand" href="#">View More Projects</a>
       </div>
     </div>
   </section>
 
-  <!-- Categories Section -->
-  <section class="categories-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Choose Category</h2>
-        <p class="section-subtitle">Find options suited to your specific real estate needs</p>
-      </div>
-      <div class="categories-grid">
-        <a href="YOUR_CATEGORY_HOMES_LINK_HERE" class="category-card"><span class="category-icon">⌂</span>Homes</a>
-        <a href="YOUR_CATEGORY_FLATS_LINK_HERE" class="category-card"><span class="category-icon">▥</span>Flats</a>
-        <a href="YOUR_CATEGORY_FARM_LINK_HERE" class="category-card"><span class="category-icon">⌂</span>Farmhouse</a>
-        <a href="YOUR_CATEGORY_OFFICES_LINK_HERE" class="category-card"><span class="category-icon">▤</span>Offices</a>
-        <a href="YOUR_CATEGORY_INDUSTRIAL_LINK_HERE" class="category-card"><span class="category-icon">▦</span>Industrial</a>
-        <a href="YOUR_CATEGORY_COMMERCIAL_LINK_HERE" class="category-card"><span class="category-icon">▥</span>Commercial</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Properties Section -->
+  <!-- 2. ORIGINAL SECTION: Featured Properties -->
   <section class="featured" id="properties">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Featured Listings</h2>
+        <h2 class="section-title">Featured Properties</h2>
         <p class="section-subtitle">Explore our handpicked premium properties available for sale and rent</p>
       </div>
 
       <div class="cards-grid">
         <!-- Property 1 -->
         <article class="property-card">
-          <a href="YOUR_PROPERTY_1_DETAIL_PAGE_LINK_HERE" class="property-thumb">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
+          <a href="#" class="property-thumb">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Property Image">
+            <span class="property-badge">For Rent</span>
+          </a>
+          <div class="property-content">
+            <div class="property-agent">◉ Agent Name</div>
+            <div class="property-type">Upper Portion</div>
+            <a href="#" class="property-title">Portion For Rent</a>
+            <div class="property-footer">
+              <div class="property-price"><span>Price</span>PKR 160,000</div>
+              <span class="property-size">500 Sq Yd</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Property 2 -->
+        <article class="property-card">
+          <a href="#" class="property-thumb">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Property Image">
+            <span class="property-badge">For Rent</span>
+          </a>
+          <div class="property-content">
+            <div class="property-agent">◉ Agent Name</div>
+            <div class="property-type">House</div>
+            <a href="#" class="property-title">Bungalow For Rent</a>
+            <div class="property-footer">
+              <div class="property-price"><span>Price</span>PKR 650,000</div>
+              <span class="property-size">1000 Sq Yd</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Property 3 -->
+        <article class="property-card">
+          <a href="#" class="property-thumb">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=
