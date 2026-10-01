@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CNYD0RQ1JR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CNYD0RQ1JR');
+    </script>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-app-status-bar-style" content="black">
+
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "21e5a048c4b74e3fb175d95c33040bc0"}'></script>
+    
+    <title>Esports PK</title>
+    
+    <script src="https://richinfo.co/richpartners/in-page/js/richads-ob.js?pubid=1001843&siteid=387364" async></script>   
+
+    <style>
+        /* ===== SLIDER CSS ===== */
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; 
+            font-family: Verdana, sans-serif; 
+            background: #000; 
+            color: #fff; 
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+        }
+        .mySlides { display: none; position: relative; }
+        img { vertical-align: middle; width: 100%; height: auto; display: block; }
+        .slideshow-container { max-width: 1000px; position: relative; margin: auto; }
+        .dot-container { text-align: center; padding: 10px; }
+        .dot { height: 12px; width: 12px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; }
+        .active { background-color: #717171; }
+        .fade { animation-name: fade; animation-duration: 1.5s; }
+        @keyframes fade { from { opacity: .4 } to { opacity: 1 } }
+        .button-container { position: absolute; bottom: 20px; width: 100%; text-align: center; }
+        .watch-button { padding: 12px 24px; font-size: 18px; color: white; background-color: #ff4500; border-radius: 5px; text-decoration: none; font-weight: bold; border: none; }
+        .watch-button:hover { background-color: #d63b00; }
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="https://cdn.shopify.com/s/files/1/0684/1643/8455/files/IMG-20260321-WA0094.jpg?v=1774117752" alt="PSL">
+        <div class="button-container">
+            <a href="https://esportslivepk.site/HBL-PSL-2026.html" class="watch-button">Watch Now</a>
+        </div>
+    </div>
+    <div class="mySlides fade">
+        <img src="https://cdn.shopify.com/s/files/1/0684/1643/8455/files/1774196761031.png?v=1774203089" alt="IPL">
+        <div class="button-container">
+            <a href="https://esportslivepk.site/TATA-IPL-2026.html" class="watch-button">Watch Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="dot-container">
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+<script>
+// Slider Logic
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 3000); // Slide change speed
+}
+</script>
+
+<script>
+  // Service Worker Registration
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => console.log('SW registered'))
+        .catch(err => console.log('SW error', err));
+    });
+  }
+</script>
+
+</body>
+  </html>
