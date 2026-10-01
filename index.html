@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Estate Centre| Karachi Real Estate</title>
+  <title>Estate Centre | Karachi Real Estate</title>
   <meta name="description" content="Search properties for sale and rent across Karachi.">
   <style>
     :root{--green:#20b99a;--dark:#092326;--ink:#16292b;--muted:#6b7779;--line:#dce3e2;--soft:#eff8f6;--white:#fff;--shadow:0 12px 35px rgba(7,29,31,.16)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
     .topbar{background:var(--green);color:#fff;font-size:11px}.topbar .wrap{height:36px;display:flex;align-items:center;justify-content:space-between}.top-info,.socials{display:flex;gap:20px}.socials{gap:14px}
-    header{background:#fff;position:relative;z-index:20}header .wrap{height:82px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px}.mark{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font-size:20px;font-weight:700}.brand{font-size:17px;font-weight:700;line-height:1.05}.brand span{font-weight:400}nav{display:flex;align-items:center;gap:25px;color:#687274;font-size:12px}.actions{display:flex;gap:8px}.btn{border:0;border-radius:5px;padding:13px 18px;font-size:12px;font-weight:700;cursor:pointer}.btn-dark{background:var(--dark);color:#fff}.btn-green{background:var(--green);color:#fff}.menu{display:none;background:none;border:0;font-size:28px}
-    .hero{height:610px;position:relative;background:linear-gradient(rgba(7,35,42,.65),rgba(7,35,42,.65)),url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=85') center/cover}.hero-copy{height:460px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center}.eyebrow{text-transform:uppercase;font-size:13px}.hero h1{font-size:48px;margin:15px 0 0}.hero p{font-size:14px;margin-top:18px}.search-box{position:absolute;left:50%;bottom:-84px;transform:translateX(-50%);width:min(900px,calc(100% - 28px))}.tabs{text-align:center}.tabs button{width:96px;padding:13px;border:0;background:#fff}.tabs button.active{background:var(--green);color:#fff}.search-form{background:#fff;box-shadow:var(--shadow);padding:28px;display:grid;grid-template-columns:1fr 2fr 1.2fr auto;gap:20px}.field label{font-size:11px;color:var(--muted);display:block;margin-bottom:9px}.control{height:44px;border:1px solid var(--line);display:flex;align-items:center;padding:0 12px;gap:8px}.control input,.control select{width:100%;border:0;background:transparent;outline:0;color:#657173}.search-form .btn{align-self:end;height:44px}
+    header{background:#fff;position:relative;z-index:20}header .wrap{height:82px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px}.logo-img{max-height:48px;width:auto}.brand{font-size:17px;font-weight:700;line-height:1.05}.brand span{font-weight:400}nav{display:flex;align-items:center;gap:25px;color:#687274;font-size:12px}.actions{display:flex;gap:8px}.btn{border:0;border-radius:5px;padding:13px 18px;font-size:12px;font-weight:700;cursor:pointer}.btn-dark{background:var(--dark);color:#fff}.btn-green{background:var(--green);color:#fff}.menu{display:none;background:none;border:0;font-size:28px}
+    .hero{height:610px;position:relative;background:linear-gradient(rgba(7,35,42,.65),rgba(7,35,42,.65)),url('YOUR_HERO_IMAGE_URL_HERE') center/cover}.hero-copy{height:460px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center}.eyebrow{text-transform:uppercase;font-size:13px}.hero h1{font-size:48px;margin:15px 0 0}.hero p{font-size:14px;margin-top:18px}.search-box{position:absolute;left:50%;bottom:-84px;transform:translateX(-50%);width:min(900px,calc(100% - 28px))}.tabs{text-align:center}.tabs button{width:96px;padding:13px;border:0;background:#fff}.tabs button.active{background:var(--green);color:#fff}.search-form{background:#fff;box-shadow:var(--shadow);padding:28px;display:grid;grid-template-columns:1fr 2fr 1.2fr auto;gap:20px}.field label{font-size:11px;color:var(--muted);display:block;margin-bottom:9px}.control{height:44px;border:1px solid var(--line);display:flex;align-items:center;padding:0 12px;gap:8px}.control input,.control select{width:100%;border:0;background:transparent;outline:0;color:#657173}.search-form .btn{align-self:end;height:44px}
     section{padding:80px 0}.featured{padding-top:130px}.title{text-align:center;font-size:34px;margin:0}.title:after{content:"";display:block;width:48px;height:3px;background:var(--green);margin:14px auto}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}.card{border:1px solid var(--line);border-radius:5px;overflow:hidden;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.04)}.photo{height:225px;position:relative;background-size:cover;background-position:center}.badge{position:absolute;top:14px;left:14px;background:var(--green);color:#fff;padding:8px 12px;font-size:11px;font-weight:700}.card-body{padding:20px}.agent{font-size:12px;color:var(--muted)}.type{font-size:11px;text-transform:uppercase;color:var(--green);font-weight:700;margin-top:18px}.card h3{font-size:18px}.details{display:flex;justify-content:space-between;align-items:end;border-top:1px solid var(--line);padding-top:16px}.details small{display:block;color:var(--muted);font-size:10px}.size{font-size:12px;color:var(--muted)}.center{text-align:center;margin-top:35px}.soft{background:var(--soft)}.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:45px}.category{height:145px;background:#fff;border-radius:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:.2s}.category:hover{background:var(--green);color:#fff}.icon{font-size:34px}.areas{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:45px}.area{height:260px;position:relative;overflow:hidden;border-radius:5px}.area img{width:100%;height:100%;object-fit:cover;transition:.4s}.area:hover img{transform:scale(1.08)}.area:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(5,28,31,.82))}.area h3{position:absolute;z-index:1;left:20px;bottom:12px;color:#fff}.agents{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:45px}.agent-card{background:#fff;padding:28px;text-align:center;border-radius:5px}.avatar{width:110px;height:110px;border-radius:50%;background:var(--dark);color:#fff;display:grid;place-items:center;margin:auto;font-size:42px}.agent-card h3{margin:20px 0 5px}.agent-card p{font-size:12px;color:var(--muted)}
     footer{background:var(--dark);color:#fff;padding:55px 0 25px}footer .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px}footer p,footer a{color:#aebabb;font-size:14px;line-height:1.8}.links{display:grid;gap:10px}.copyright{border-top:1px solid rgba(255,255,255,.16);margin-top:45px;padding-top:22px;color:#91a1a2;font-size:12px}
     @media(max-width:900px){nav,.actions{display:none}.menu{display:block}.cards{grid-template-columns:1fr 1fr}.categories{grid-template-columns:repeat(3,1fr)}.areas,.agents{grid-template-columns:1fr 1fr}}
@@ -19,17 +19,98 @@
 </head>
 <body id="top">
   <div class="topbar"><div class="wrap"><div class="top-info"><span>▣ Thursday, Oct 1, 2026</span><span>● Bukhari Commercial Area DHA Karachi</span><span>☎ 9 AM – 9 PM</span></div><div class="socials"><span>f</span><span>◎</span></div></div></div>
-  <header><div class="wrap"><a class="logo" href="#top"><span class="mark">PP</span><span class="brand">PROPERTY<br><span>PRIME TIME</span></span></a><nav><a href="#top">HOME</a><a href="#properties">BUY⌄</a><a href="#properties">RENT⌄</a><a href="#areas">ABOUT US</a><a href="#agents">LOGIN</a><a href="#footer">BLOG</a><a href="#footer">CONTACT US</a></nav><div class="actions"><button class="btn btn-dark">☷ ALL LISTINGS</button><button class="btn btn-dark">♟ LOGIN</button></div><button class="menu" onclick="document.querySelector('nav').style.display=document.querySelector('nav').style.display==='flex'?'none':'flex'">☰</button></div></header>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="#top">
+        <!-- Aap apna logo image link 'src' me add kar sakte hain -->
+        <img src="YOUR_LOGO_IMAGE_URL_HERE" alt="Estate Centre Logo" class="logo-img">
+        <span class="brand">ESTATE<br><span>CENTRE</span></span>
+      </a>
+      <nav><a href="#top">HOME</a><a href="#properties">BUY⌄</a><a href="#properties">RENT⌄</a><a href="#areas">ABOUT US</a><a href="#agents">LOGIN</a><a href="#footer">BLOG</a><a href="#footer">CONTACT US</a></nav>
+      <div class="actions"><button class="btn btn-dark">☷ ALL LISTINGS</button><button class="btn btn-dark">♟ LOGIN</button></div>
+      <button class="menu" onclick="document.querySelector('nav').style.display=document.querySelector('nav').style.display==='flex'?'none':'flex'">☰</button>
+    </div>
+  </header>
   <section class="hero"><div class="wrap hero-copy"><div class="eyebrow">Turning real estate opportunities into smart investments</div><h1>Find Your Dream House</h1><p>Trusted Real Estate Solutions For Buying, Renting &amp; Investment</p></div><div class="search-box"><div class="tabs"><button class="active" onclick="setMode(this,'Buy')">Buy</button><button onclick="setMode(this,'Rent')">Rent</button></div><form class="search-form" onsubmit="event.preventDefault();alert('Search submitted')"><div class="field"><label id="searchLabel">Search Property to Buy</label><div class="control">⌕ <input placeholder="Keyword"></div></div><div class="field"><label>Location</label><div class="control">⌖ <select><option>Badar Commercial Area</option><option>Bahria Town Karachi</option><option>Clifton</option><option>DHA City Karachi</option><option>DHA Defence</option><option>DHA Phase 5</option><option>DHA Phase 6</option><option>DHA Phase 8</option></select></div></div><div class="field"><label>Property Type</label><div class="control">▥ <select><option>Homes</option><option>Plots</option><option>Commercial</option></select></div></div><button class="btn btn-dark">⌕ Search</button></form></div></section>
-  <section class="featured" id="properties"><div class="wrap"><h2 class="title">Featured Properties</h2><div class="cards">
-    <article class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80')"><span class="badge">For Rent</span></div><div class="card-body"><div class="agent">◉ Najeem Abbasi</div><div class="type">Upper Portion</div><h3>Portion For Rent</h3><div class="details"><div><small>PRICE</small><b>160,000</b></div><span class="size">500 Square Yard</span></div></div></article>
-    <article class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80')"><span class="badge">For Rent</span></div><div class="card-body"><div class="agent">◉ Muhammad Najeem Abbasi</div><div class="type">House</div><h3>Bungalow For Rent</h3><div class="details"><div><small>PRICE</small><b>650,000</b></div><span class="size">1000 Square Yard</span></div></div></article>
-    <article class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80')"><span class="badge">For Sale</span></div><div class="card-body"><div class="agent">◉ Muhammad Najeem Abbasi</div><div class="type">House</div><h3>Bungalow For Sale</h3><div class="details"><div><small>PRICE</small><b>180,000,000</b></div><span class="size">500 Square Yard</span></div></div></article>
-  </div><div class="center"><button class="btn btn-dark">View All Properties</button></div></div></section>
+  <section class="featured" id="properties">
+    <div class="wrap">
+      <h2 class="title">Featured Properties</h2>
+      <div class="cards">
+        <article class="card">
+          <!-- Property Image Link Yahan Add Karein -->
+          <div class="photo" style="background-image:url('YOUR_PROPERTY_IMAGE_1_URL')"><span class="badge">For Rent</span></div>
+          <div class="card-body">
+            <div class="agent">◉ Agent Name</div>
+            <div class="type">Upper Portion</div>
+            <h3>Portion For Rent</h3>
+            <div class="details"><div><small>PRICE</small><b>160,000</b></div><span class="size">500 Square Yard</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <!-- Property Image Link Yahan Add Karein -->
+          <div class="photo" style="background-image:url('YOUR_PROPERTY_IMAGE_2_URL')"><span class="badge">For Rent</span></div>
+          <div class="card-body">
+            <div class="agent">◉ Agent Name</div>
+            <div class="type">House</div>
+            <h3>Bungalow For Rent</h3>
+            <div class="details"><div><small>PRICE</small><b>650,000</b></div><span class="size">1000 Square Yard</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <!-- Property Image Link Yahan Add Karein -->
+          <div class="photo" style="background-image:url('YOUR_PROPERTY_IMAGE_3_URL')"><span class="badge">For Sale</span></div>
+          <div class="card-body">
+            <div class="agent">◉ Agent Name</div>
+            <div class="type">House</div>
+            <h3>Bungalow For Sale</h3>
+            <div class="details"><div><small>PRICE</small><b>180,000,000</b></div><span class="size">500 Square Yard</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="center"><button class="btn btn-dark">View All Properties</button></div>
+    </div>
+  </section>
   <section class="soft"><div class="wrap"><h2 class="title">Choose Your Category</h2><div class="categories"><a class="category"><span class="icon">⌂</span>Homes</a><a class="category"><span class="icon">▥</span>Flats</a><a class="category"><span class="icon">⌂</span>Farmhouse</a><a class="category"><span class="icon">▤</span>Offices</a><a class="category"><span class="icon">▦</span>Industrial</a><a class="category"><span class="icon">▥</span>Commercial</a></div></div></section>
-  <section id="areas"><div class="wrap"><h2 class="title">Find Properties in Popular Areas</h2><div class="areas"><a class="area"><img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=700&q=80" alt="DHA Karachi"><h3>DHA Karachi</h3></a><a class="area"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=80" alt="DHA City Karachi"><h3>DHA City Karachi</h3></a><a class="area"><img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=700&q=80" alt="Bahria Town Karachi"><h3>Bahria Town Karachi</h3></a><a class="area"><img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=700&q=80" alt="Clifton"><h3>Clifton</h3></a></div></div></section>
-  <section class="soft" id="agents"><div class="wrap"><h2 class="title">Meet Our Agents</h2><div class="agents"><article class="agent-card"><div class="avatar">♙</div><h3>Abeed Rasheed</h3><p>Agent</p></article><article class="agent-card"><div class="avatar">♙</div><h3>Adeel Khaliq</h3><p>Agent</p></article><article class="agent-card"><div class="avatar">♙</div><h3>Adil Zia</h3><p>Agent</p></article><article class="agent-card"><div class="avatar">♙</div><h3>Aamir Shabbir</h3><p>Agent</p></article></div></div></section>
-  <footer id="footer"><div class="wrap"><div class="grid"><div><div class="logo"><span class="mark">PP</span><span class="brand">PROPERTY<br><span>PRIME TIME</span></span></div><p>Property Prime Time helps buyers, renters and investors discover trusted real estate opportunities across Karachi.</p></div><div><h3>Quick Links</h3><div class="links"><a href="#properties">Properties for Sale</a><a href="#properties">Properties for Rent</a><a href="#areas">Popular Areas</a><a href="#agents">Our Agents</a></div></div><div><h3>Contact Us</h3><p>● Bukhari Commercial Area, DHA Karachi<br>☎ 9 AM – 9 PM<br>✉ info@ppthomes.com</p></div></div><div class="copyright">© 2026 Property Prime Time. All rights reserved.</div></div></footer>
+  <section id="areas">
+    <div class="wrap">
+      <h2 class="title">Find Properties in Popular Areas</h2>
+      <div class="areas">
+        <a class="area"><img src="YOUR_AREA_IMAGE_1_URL" alt="DHA Karachi"><h3>DHA Karachi</h3></a>
+        <a class="area"><img src="YOUR_AREA_IMAGE_2_URL" alt="DHA City Karachi"><h3>DHA City Karachi</h3></a>
+        <a class="area"><img src="YOUR_AREA_IMAGE_3_URL" alt="Bahria Town Karachi"><h3>Bahria Town Karachi</h3></a>
+        <a class="area"><img src="YOUR_AREA_IMAGE_4_URL" alt="Clifton"><h3>Clifton</h3></a>
+      </div>
+    </div>
+  </section>
+  <section class="soft" id="agents">
+    <div class="wrap">
+      <h2 class="title">Meet Our Agents</h2>
+      <div class="agents">
+        <article class="agent-card"><div class="avatar">♙</div><h3>Agent Name 1</h3><p>Agent</p></article>
+        <article class="agent-card"><div class="avatar">♙</div><h3>Agent Name 2</h3><p>Agent</p></article>
+        <article class="agent-card"><div class="avatar">♙</div><h3>Agent Name 3</h3><p>Agent</p></article>
+        <article class="agent-card"><div class="avatar">♙</div><h3>Agent Name 4</h3><p>Agent</p></article>
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <div class="logo">
+            <!-- Footer Logo Image Link Yahan Add Karein -->
+            <img src="YOUR_LOGO_IMAGE_URL_HERE" alt="Estate Centre Logo" class="logo-img">
+            <span class="brand">ESTATE<br><span>CENTRE</span></span>
+          </div>
+          <p>Estate Centre helps buyers, renters and investors discover trusted real estate opportunities across Karachi.</p>
+        </div>
+        <div><h3>Quick Links</h3><div class="links"><a href="#properties">Properties for Sale</a><a href="#properties">Properties for Rent</a><a href="#areas">Popular Areas</a><a href="#agents">Our Agents</a></div></div>
+        <div><h3>Contact Us</h3><p>● Bukhari Commercial Area, DHA Karachi<br>☎ 9 AM – 9 PM<br>✉ info@estatecentre.com</p></div>
+      </div>
+      <div class="copyright">© 2026 Estate Centre. All rights reserved.</div>
+    </div>
+  </footer>
   <script>function setMode(button,mode){document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));button.classList.add('active');document.getElementById('searchLabel').textContent='Search Property to '+mode}</script>
 </body>
-</html>
+  </html>
+  
