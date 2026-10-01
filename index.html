@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estate Centre | Premier Real Estate Karachi</title>
-  <meta name="description" content="Search properties for sale and rent across Karachi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,329 +19,155 @@
       --line: #e2e8f0;
       --bg: #f8fafc;
       --white: #ffffff;
-      --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
-      --shadow-lg: 0 25px 50px -12px rgba(15, 118, 110, 0.15);
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
       --radius: 12px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--slate); background: var(--bg); line-height: 1.6; }
-    a { color: inherit; text-decoration: none; display: inline-block; }
-    button, input, select { font: inherit; }
-    .container { width: min(1200px, calc(100% - 40px)); margin: 0 auto; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--slate); background: var(--bg); line-height: 1.5; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1200px, calc(100% - 32px)); margin: 0 auto; }
 
-    /* Top Bar */
-    .topbar { background: var(--dark); color: #94a3b8; font-size: 13px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .topbar .container { display: flex; justify-content: space-between; align-items: center; }
-    .topbar-info, .topbar-socials { display: flex; gap: 24px; align-items: center; }
-
-    /* Header Navigation */
-    header { background: var(--white); position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    header .container { height: 80px; display: flex; align-items: center; justify-content: space-between; }
-    .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 20px; color: var(--dark); letter-spacing: -0.5px; }
-    .logo img { height: 44px; width: auto; object-fit: contain; }
+    /* Header */
+    header { background: var(--white); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--line); }
+    header .container { height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-weight: 800; font-size: 20px; color: var(--dark); letter-spacing: -0.5px; }
     .logo span { color: var(--brand); }
-    
-    nav { display: flex; gap: 32px; font-size: 14px; font-weight: 600; }
-    nav a { color: var(--slate); transition: color 0.2s; }
-    nav a:hover { color: var(--brand); }
-    .nav-btn-group { display: flex; gap: 12px; }
+    .menu-toggle { background: none; border: none; font-size: 24px; cursor: pointer; color: var(--dark); }
 
-    /* Buttons */
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 14px; transition: all 0.2s; border: none; cursor: pointer; text-align: center; }
-    .btn-brand { background: var(--brand); color: var(--white); }
-    .btn-brand:hover { background: var(--brand-hover); transform: translateY(-1px); }
-    .btn-dark { background: var(--dark); color: var(--white); }
-    .btn-dark:hover { background: #1e293b; transform: translateY(-1px); }
-    .btn-outline { border: 1px solid var(--line); background: var(--white); color: var(--slate); }
-    .btn-outline:hover { background: var(--bg); border-color: #cbd5e1; }
-    .menu-toggle { display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--dark); }
+    /* Cards Grid Fix */
+    section { padding: 40px 0; }
+    .section-title { font-size: 24px; font-weight: 800; color: var(--dark); margin-bottom: 20px; text-align: center; }
 
-    /* Hero Section */
-    .hero { position: relative; padding: 100px 0 140px; background: linear-gradient(135deg, rgba(15,23,42,0.92), rgba(15,118,110,0.85)), url('YOUR_HERO_IMAGE_URL_HERE') center/cover no-repeat; color: var(--white); text-align: center; }
-    .hero-content { max-width: 780px; margin: 0 auto; }
-    .hero-tag { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(8px); padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 20px; display: inline-block; }
-    .hero h1 { font-size: 52px; font-weight: 800; line-height: 1.15; margin-bottom: 18px; letter-spacing: -1px; }
-    .hero p { font-size: 18px; color: #e2e8f0; font-weight: 400; margin-bottom: 30px; }
-
-    /* Search Widget */
-    .search-wrapper { position: relative; margin-top: -60px; z-index: 10; }
-    .search-card { background: var(--white); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow-lg); border: 1px solid var(--line); }
-    .search-tabs { display: flex; gap: 8px; margin-bottom: 24px; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
-    .tab-btn { padding: 10px 24px; border-radius: 6px; font-weight: 700; font-size: 14px; background: transparent; border: none; color: var(--muted); cursor: pointer; transition: all 0.2s; }
-    .tab-btn.active { background: var(--brand-light); color: var(--brand); }
-    .search-grid { display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 16px; align-items: end; }
-    .form-group label { display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-    .form-control { width: 100%; height: 50px; padding: 0 16px; border: 1px solid var(--line); border-radius: 8px; outline: none; font-size: 14px; color: var(--dark); background: #fafafa; transition: all 0.2s; }
-    .form-control:focus { border-color: var(--brand); background: var(--white); box-shadow: 0 0 0 3px rgba(15,118,110,0.1); }
-
-    /* Shared Section Styling */
-    section { padding: 80px 0; }
-    .section-header { text-align: center; max-width: 600px; margin: 0 auto 50px; }
-    .section-title { font-size: 36px; font-weight: 800; color: var(--dark); letter-spacing: -0.5px; margin-bottom: 12px; }
-    .section-subtitle { color: var(--muted); font-size: 16px; }
-
-    /* Auto Slider Section */
-    .projects-slider-section { background: var(--dark); color: var(--white); }
-    .projects-slider-section .section-title { color: var(--white); }
-    .projects-slider-section .section-subtitle { color: #94a3b8; }
-    .car { position: relative; max-width: 1024px; margin: 0 auto; }
-    .car article { display: grid; background: var(--white); color: var(--slate); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); transition: opacity 0.5s ease-in-out; }
-    @media(min-width:768px){ .car article { grid-template-columns: 1.35fr 1fr; } }
-    .car img { width: 100%; height: 350px; object-fit: cover; transition: all 0.5s ease; }
-    @media(min-width:768px){ .car img { height: 450px; } }
-    .car .info { padding: 40px; display: flex; flex-direction: column; justify-content: center; }
-    .car .eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--brand); margin-bottom: 8px; }
-    .car h3 { font-size: 30px; font-weight: 800; color: var(--dark); margin-top: 6px; }
-    .car .price { font-size: 22px; font-weight: 800; color: var(--brand); margin-top: 16px; }
-    .car .place { font-size: 14px; color: var(--muted); margin-top: 6px; }
-    .car .beds { border-top: 1px solid var(--line); padding-top: 16px; margin-top: 24px; font-size: 13px; font-weight: 600; text-transform: uppercase; color: var(--slate); }
-    
-    .arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 0; background: var(--brand); color: var(--white); font-size: 22px; cursor: pointer; border-radius: 50%; display: grid; place-items: center; transition: all 0.2s; z-index: 5; }
-    .arrow:hover { background: var(--brand-hover); transform: translateY(-50%) scale(1.08); }
-    .arrow.l { left: -22px; }
-    .arrow.r { right: -22px; }
-    @media(max-width: 768px){ .arrow.l { left: 10px; } .arrow.r { right: 10px; } }
-
-    /* Featured Properties Section */
-    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-    .property-card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--line); overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; }
-    .property-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: #cbd5e1; }
-    .property-thumb { position: relative; height: 240px; width: 100%; overflow: hidden; display: block; }
-    .property-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-    .property-card:hover .property-thumb img { transform: scale(1.06); }
-    .property-badge { position: absolute; top: 16px; left: 16px; background: var(--brand); color: var(--white); font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 6px; text-transform: uppercase; }
-    .property-content { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
-    .property-agent { font-size: 13px; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
-    .property-type { color: var(--brand); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
-    .property-title { font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 16px; display: block; transition: color 0.2s; }
-    .property-title:hover { color: var(--brand); }
-    .property-footer { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; }
-    .property-price { font-size: 22px; font-weight: 800; color: var(--dark); }
-    .property-price span { font-size: 11px; color: var(--muted); display: block; font-weight: 600; text-transform: uppercase; }
-    .property-size { font-size: 13px; font-weight: 600; color: var(--slate); background: var(--bg); padding: 6px 12px; border-radius: 6px; }
-
-    /* Categories Section */
-    .categories-section { background: var(--white); border-bottom: 1px solid var(--line); }
-    .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
-    .category-card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 20px; text-align: center; transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; gap: 12px; font-weight: 700; color: var(--dark); }
-    .category-card:hover { background: var(--brand); color: var(--white); border-color: var(--brand); transform: translateY(-3px); }
-    .category-icon { font-size: 32px; }
-
-    /* Popular Areas Grid Section */
-    .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-    .area-card { position: relative; height: 280px; border-radius: var(--radius); overflow: hidden; display: block; }
-    .area-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-    .area-card:hover img { transform: scale(1.08); }
-    .area-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,23,42,0.85) 0%, transparent 60%); display: flex; align-items: flex-end; padding: 24px; }
-    .area-overlay h3 { color: var(--white); font-size: 22px; font-weight: 700; }
-
-    /* Agents Section */
-    .agents-section { background: var(--white); }
-    .agents-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
-    .agent-card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px 24px; text-align: center; }
-    .agent-avatar { width: 90px; height: 90px; border-radius: 50%; background: var(--brand-light); color: var(--brand); display: grid; place-items: center; margin: 0 auto 20px; font-size: 36px; border: 2px solid var(--brand); }
-    .agent-card h3 { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
-    .agent-card p { font-size: 13px; color: var(--muted); font-weight: 500; }
-
-    /* Developers Partners Section */
-    .partners-section { background: #f1f5f9; padding: 70px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .partners-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 1150px; margin: 0 auto; }
-    @media(min-width: 768px){ .partners-grid { grid-template-columns: repeat(5, 1fr); gap: 24px; } }
-    .partner-item { height: 100px; display: grid; place-items: center; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line); padding: 16px; transition: transform 0.2s; font-weight: 700; color: var(--dark); }
-    .partner-item:hover { transform: translateY(-3px); border-color: var(--brand); }
-
-    /* Footer */
-    footer { background: var(--dark); color: #94a3b8; padding: 80px 0 30px; }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
-    .footer-logo { color: var(--white); font-size: 22px; font-weight: 800; margin-bottom: 16px; display: inline-flex; align-items: center; gap: 10px; }
-    .footer-logo img { height: 40px; }
-    .footer-about { max-width: 360px; font-size: 14px; line-height: 1.7; }
-    .footer-title { color: var(--white); font-size: 16px; font-weight: 700; margin-bottom: 20px; }
-    .footer-links { display: flex; flex-direction: column; gap: 12px; font-size: 14px; }
-    .footer-links a:hover { color: var(--brand); }
-    .copyright { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 30px; font-size: 13px; text-align: center; }
-
-    /* Responsive */
-    @media (max-width: 992px) {
-      .hero h1 { font-size: 40px; }
-      .search-grid { grid-template-columns: 1fr 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+    .cards-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 20px; 
     }
-    @media (max-width: 768px) {
-      nav, .nav-btn-group { display: none; }
-      .menu-toggle { display: block; }
-      .hero h1 { font-size: 32px; }
-      .search-grid { grid-template-columns: 1fr; }
-      .search-wrapper { margin-top: -40px; }
+
+    .property-card { 
+      background: var(--white); 
+      border-radius: var(--radius); 
+      border: 1px solid var(--line); 
+      overflow: hidden; 
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
     }
+
+    .property-thumb { 
+      position: relative; 
+      width: 100%; 
+      height: 200px; 
+      background: #e2e8f0;
+    }
+
+    .property-thumb img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      display: block;
+    }
+
+    .property-badge { 
+      position: absolute; 
+      top: 12px; 
+      left: 12px; 
+      background: var(--brand); 
+      color: var(--white); 
+      font-size: 11px; 
+      font-weight: 700; 
+      padding: 4px 10px; 
+      border-radius: 4px; 
+      text-transform: uppercase; 
+    }
+
+    .property-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+    .property-agent { font-size: 12px; color: var(--muted); margin-bottom: 4px; font-weight: 500; }
+    .property-type { color: var(--brand); font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 6px; }
+    .property-title { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 16px; }
+    
+    .property-footer { 
+      margin-top: auto; 
+      padding-top: 12px; 
+      border-top: 1px solid var(--line); 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+    
+    .property-price { font-size: 18px; font-weight: 800; color: var(--dark); }
+    .property-price span { font-size: 10px; color: var(--muted); display: block; font-weight: 600; text-transform: uppercase; }
+    .property-size { font-size: 12px; font-weight: 600; color: var(--slate); background: var(--bg); padding: 4px 8px; border-radius: 4px; }
   </style>
 </head>
-<body id="top">
+<body>
 
-  <!-- Top bar -->
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-info">
-        <span>▣ Thursday, Oct 1, 2026</span>
-        <span>● Badar Commercial Area DHA Karachi</span>
-        <span>☎ 9 AM – 9 PM</span>
-      </div>
-      <div class="topbar-socials">
-        <a href="#">f</a>
-        <a href="#">◎</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Header Navigation -->
   <header>
     <div class="container">
-      <a class="logo" href="#">
-        ESTATE <span>CENTRE</span>
-      </a>
-      
-      <nav id="navbar">
-        <a href="#">HOME</a>
-        <a href="#">BUY</a>
-        <a href="#">RENT</a>
-        <a href="#">ABOUT US</a>
-        <a href="#">BLOG</a>
-        <a href="#">CONTACT US</a>
-      </nav>
-
-      <div class="nav-btn-group">
-        <a href="#" class="btn btn-outline">All Listings</a>
-        <a href="#" class="btn btn-brand">Login</a>
-      </div>
-
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <a class="logo" href="#">ESTATE <span>CENTRE</span></a>
+      <button class="menu-toggle">☰</button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <section>
     <div class="container">
-      <div class="hero-content">
-        <span class="hero-tag">Smart Investments</span>
-        <h1>Find Your Dream House in Karachi</h1>
-        <p>Trusted Real Estate Solutions For Buying, Renting & Investment</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Search Section -->
-  <div class="container search-wrapper">
-    <div class="search-card">
-      <div class="search-tabs">
-        <button class="tab-btn active" onclick="setMode(this, 'Buy')">Buy</button>
-        <button class="tab-btn" onclick="setMode(this, 'Rent')">Rent</button>
-      </div>
-      <form onsubmit="event.preventDefault();">
-        <div class="search-grid">
-          <div class="form-group">
-            <label id="searchLabel">Keyword Search</label>
-            <input type="text" class="form-control" placeholder="Enter Keyword...">
-          </div>
-          <div class="form-group">
-            <label>Location</label>
-            <select class="form-control">
-              <option>Badar Commercial Area</option>
-              <option>Bahria Town Karachi</option>
-              <option>Clifton</option>
-              <option>DHA City Karachi</option>
-              <option>DHA Defence</option>
-              <option>DHA Phase 5</option>
-              <option>DHA Phase 6</option>
-              <option>DHA Phase 8</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Property Type</label>
-            <select class="form-control">
-              <option>Homes</option>
-              <option>Plots</option>
-              <option>Commercial</option>
-            </select>
-          </div>
-          <a href="#" class="btn btn-brand" style="height: 50px;">Search</a>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- 1. AUTO-SLIDER SECTION: Explore All Projects in Karachi -->
-  <section id="projects" class="projects-slider-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Explore All Projects in Karachi</h2>
-        <p class="section-subtitle">Discover high-ROI off-plan and luxury development projects across the city</p>
-      </div>
-      <div class="car">
-        <article id="projectArticle">
-          <img id="pImg" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80" alt="Project Image">
-          <div class="info">
-            <p class="eyebrow" id="pType">For Sale</p>
-            <h3 id="pName">Emaar Oceanfront</h3>
-            <p class="price" id="pPrice">PKR 45 Million Onwards</p>
-            <p class="place" id="pPlace">DHA Phase 8, Karachi</p>
-            <p class="beds" id="pBeds">2 · 3 · 4 Bedroom Luxury Apartments</p>
-          </div>
-        </article>
-        <button class="arrow l" id="prev" aria-label="Previous project">‹</button>
-        <button class="arrow r" id="next" aria-label="Next project">›</button>
-      </div>
-      <div style="text-align:center; margin-top:40px;">
-        <a class="btn btn-brand" href="#">View More Projects</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. ORIGINAL SECTION: Featured Properties -->
-  <section class="featured" id="properties">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Featured Properties</h2>
-        <p class="section-subtitle">Explore our handpicked premium properties available for sale and rent</p>
-      </div>
+      <h2 class="section-title">Featured Properties</h2>
 
       <div class="cards-grid">
-        <!-- Property 1 -->
+        <!-- Property Card 1 -->
         <article class="property-card">
-          <a href="#" class="property-thumb">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Property Image">
+          <div class="property-thumb">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Bungalow For Rent">
             <span class="property-badge">For Rent</span>
-          </a>
-          <div class="property-content">
-            <div class="property-agent">◉ Agent Name</div>
-            <div class="property-type">Upper Portion</div>
-            <a href="#" class="property-title">Portion For Rent</a>
-            <div class="property-footer">
-              <div class="property-price"><span>Price</span>PKR 160,000</div>
-              <span class="property-size">500 Sq Yd</span>
-            </div>
           </div>
-        </article>
-
-        <!-- Property 2 -->
-        <article class="property-card">
-          <a href="#" class="property-thumb">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Property Image">
-            <span class="property-badge">For Rent</span>
-          </a>
           <div class="property-content">
             <div class="property-agent">◉ Agent Name</div>
             <div class="property-type">House</div>
-            <a href="#" class="property-title">Bungalow For Rent</a>
+            <h3 class="property-title">Bungalow For Rent</h3>
             <div class="property-footer">
-              <div class="property-price"><span>Price</span>PKR 650,000</div>
+              <div class="property-price"><span>PRICE</span>PKR 650,000</div>
               <span class="property-size">1000 Sq Yd</span>
             </div>
           </div>
         </article>
 
-        <!-- Property 3 -->
+        <!-- Property Card 2 -->
         <article class="property-card">
-          <a href="#" class="property-thumb">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=
+          <div class="property-thumb">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Portion For Rent">
+            <span class="property-badge">For Rent</span>
+          </div>
+          <div class="property-content">
+            <div class="property-agent">◉ Agent Name</div>
+            <div class="property-type">Upper Portion</div>
+            <h3 class="property-title">Portion For Rent</h3>
+            <div class="property-footer">
+              <div class="property-price"><span>PRICE</span>PKR 160,000</div>
+              <span class="property-size">500 Sq Yd</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Property Card 3 -->
+        <article class="property-card">
+          <div class="property-thumb">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Bungalow For Sale">
+            <span class="property-badge">For Sale</span>
+          </div>
+          <div class="property-content">
+            <div class="property-agent">◉ Agent Name</div>
+            <div class="property-type">House</div>
+            <h3 class="property-title">Bungalow For Sale</h3>
+            <div class="property-footer">
+              <div class="property-price"><span>PRICE</span>PKR 180,000,000</div>
+              <span class="property-size">500 Sq Yd</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
