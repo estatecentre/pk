@@ -1261,17 +1261,17 @@
     <div class="grid-container">
 
       <a href="javascript:void(0)" class="card area-card" onclick="alert('Area properties coming soon!')">
-        <div class="img-placeholder" style="height:190px;"><image src="https://cdn.shopify.com/s/files/1/0684/1643/8455/files/images_2.jpg?v=1791032360"></div>
+        <div class="img-placeholder" style="height:190px;"><image src="https://cdn.shopify.com/s/files/1/0684/1643/8455/files/DHA_Karachi_box_size.jpg?v=1791063114"></div>
         <div class="area-title">DHA Karachi</div>
       </a>
 
       <a href="javascript:void(0)" class="card area-card" onclick="alert('Area properties coming soon!')">
-        <div class="img-placeholder" style="height:190px;"><image src="inhttps://cdn.shopify.com/s/files/1/0684/1643/8455/files/images_2_1c623d0e-0c8a-4014-96b3-a3b9f60c3b56.png?v=1791061971"></div>
+        <div class="img-placeholder" style="height:190px;"><image src="https://cdn.shopify.com/s/files/1/0684/1643/8455/files/images_3_418200e2-4ab1-4bf3-9d9b-54620ebc6ee6.png?v=1791062970"></div>
         <div class="area-title">DHA City Karachi</div>
       </a>
 
       <a href="javascript:void(0)" class="card area-card" onclick="alert('Area properties coming soon!')">
-        <div class="img-placeholder" style="height:190px;"><image src="https://cdn.shopify.com/s/files/1/0684/1643/8455/files/images_4.jpg?v=1791061971"></div>
+        <div class="img-placeholder" style="height:190px;"><image src="https://cdn.shopify.com/s/files/1/0684/1643/8455/files/images_4.png?v=1791062970"></div>
         <div class="area-title">Bahria Town Karachi</div>
       </a>
 
@@ -1517,6 +1517,19 @@
     setupAutoSlider('agentsSlider', 'agentDots');
     setupAutoSlider('developersSlider', null);
   </script>
+<script>
+(function () {
+    const CHECK_INTERVAL = 10000; // 10 seconds
 
+    setTimeout(function () {
+        const url = new URL(window.location.href);
+
+        // Browser/CDN cache ko bypass karne ke liye new version parameter
+        url.searchParams.set("v", Date.now());
+
+        window.location.replace(url.href);
+    }, CHECK_INTERVAL);
+})();
+</script>
 </body>
 </html>
